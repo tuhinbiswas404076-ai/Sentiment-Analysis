@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+*.pkl
+.env
+.venv/
+venv/
+instance/
+sentiment_history.db
+.pytest_cache/

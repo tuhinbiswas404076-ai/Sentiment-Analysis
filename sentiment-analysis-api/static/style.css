@@ -1,0 +1,122 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1f2937, #111827);
+  color: #f9fafb;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  width: min(760px, 100%);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+}
+
+.subtitle {
+  color: #d1d5db;
+}
+
+textarea {
+  width: 100%;
+  min-height: 140px;
+  border-radius: 12px;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.meta-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  color: #9ca3af;
+}
+
+button {
+  margin-top: 12px;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-size: 15px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.hidden {
+  display: none;
+}
+
+.result-card {
+  margin-top: 20px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.1);
+}
+
+.confidence-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0 12px;
+}
+
+.prob-item {
+  display: grid;
+  grid-template-columns: 70px 1fr 42px;
+  gap: 8px;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.bar {
+  background: rgba(255,255,255,0.2);
+  height: 8px;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.bar div {
+  height: 100%;
+  background: #34d399;
+  border-radius: inherit;
+}
+
+.error {
+  margin-top: 12px;
+  color: #f87171;
+}
+
+.examples {
+  margin-top: 24px;
+}
+
+.example-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.example-btn {
+  background: #374151;
+}

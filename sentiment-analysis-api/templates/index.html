@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Sentiment Analysis</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card">
+        <h1>AI Sentiment Analysis</h1>
+        <p class="subtitle">Classify text as positive, neutral, or negative.</p>
+
+        <textarea id="text-input" maxlength="5000" placeholder="Enter a sentence or review..."></textarea>
+        <div class="meta-row">
+          <span id="char-count">0 / 5000</span>
+          <button id="clear-btn">Clear</button>
+        </div>
+
+        <button id="analyze-btn">Analyze Sentiment</button>
+        <div id="loading" class="hidden">Analyzing...</div>
+        <div id="error-message" class="error hidden"></div>
+
+        <div id="result-card" class="result-card hidden">
+          <h2 id="result-sentiment">Positive</h2>
+          <div class="confidence-row">
+            <span>Confidence</span>
+            <strong id="confidence-value">0%</strong>
+          </div>
+          <div class="probability-list">
+            <div class="prob-item"><span>Positive</span><div class="bar"><div id="positive-bar"></div></div><span id="positive-prob"></span></div>
+            <div class="prob-item"><span>Neutral</span><div class="bar"><div id="neutral-bar"></div></div><span id="neutral-prob"></span></div>
+            <div class="prob-item"><span>Negative</span><div class="bar"><div id="negative-bar"></div></div><span id="negative-prob"></span></div>
+          </div>
+        </div>
+
+        <div class="examples">
+          <h3>Try an example</h3>
+          <div class="example-buttons">
+            <button class="example-btn" data-text="I really enjoyed this movie and would watch it again.">Positive</button>
+            <button class="example-btn" data-text="This product is okay but not amazing.">Neutral</button>
+            <button class="example-btn" data-text="This is terrible and I hate it.">Negative</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="/static/script.js"></script>
+  </body>
+</html>

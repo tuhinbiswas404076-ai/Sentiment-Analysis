@@ -31,3 +31,7 @@ Install the required Python packages used in the notebook, such as:
 ## GitHub
 The project is also pushed to GitHub at:
 https://github.com/tuhinbiswas404076-ai/Sentiment-Analysis.git
+
+## Live link
+A simple GitHub Pages landing page is available at:
+https://tuhinbiswas404076-ai.github.io/Sentiment-Analysis/

@@ -36,4 +36,5 @@ https://github.com/tuhinbiswas404076-ai/Sentiment-Analysis.git
 A simple GitHub Pages landing page is available at:
 https://tuhinbiswas404076-ai.github.io/Sentiment-Analysis/
 
-![GitHub Pages]([https://github.com/tuhinbiswas404076-ai/Sentiment-Analysis/actions/workflows/pages.yml/badge.svg](http://127.0.0.1:5000/))
+![GitHub Pages]([[https://github.com/tuhinbiswas404076-ai/Sentiment-Analysis/actions/workflows/pages.yml/badge.svg](http://127.0.0.1:5000/))
+](http://127.0.0.1:5000/)

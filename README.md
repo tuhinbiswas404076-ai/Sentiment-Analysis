@@ -1,5 +1,5 @@
 ---
-title: AI Sentiment Analysis
+title: AI Sentiment Analysis & Explainable AI
 emoji: 🎭
 colorFrom: indigo
 colorTo: purple
@@ -8,10 +8,10 @@ sdk_version: 4.19.2
 app_file: app.py
 pinned: false
 license: mit
-short_description: State-of-the-art Sentiment Analysis Model using TF-IDF and Logistic Regression.
+short_description: State-of-the-art Sentiment Analysis with Explainable AI & Batch CSV Processing.
 ---
 
-# 🎭 AI Sentiment Analysis
+# 🎭 AI Sentiment Analysis & Explainable AI Dashboard
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.3%2B-orange.svg)](https://scikit-learn.org/)
@@ -20,11 +20,11 @@ short_description: State-of-the-art Sentiment Analysis Model using TF-IDF and Lo
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-yellow.svg)](https://huggingface.co/spaces)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
-An end-to-end, production-ready **AI Sentiment Analysis** machine learning solution powered by an optimized **TF-IDF + Logistic Regression** pipeline trained on **88,000+ multi-domain text reviews**.
+An end-to-end, production-ready **AI Sentiment Analysis & Explainable AI** solution powered by an optimized **TF-IDF + Logistic Regression** pipeline trained on **88,000+ multi-domain text reviews**.
 
 ---
 
-## 🚀 Live Demo Links
+## 🚀 Live Demos & Repository Links
 
 - ⚡ **Active Live Demo Link:** [https://besides-directed-smaller-follows.trycloudflare.com](https://besides-directed-smaller-follows.trycloudflare.com)
 - 🌐 **Hugging Face Space Link:** [https://huggingface.co/spaces/tuhinbiswas404076-ai/sentiment-analysis-ai](https://huggingface.co/spaces/tuhinbiswas404076-ai/sentiment-analysis-ai)
@@ -34,18 +34,18 @@ An end-to-end, production-ready **AI Sentiment Analysis** machine learning solut
 
 ## 📌 Project Overview
 
-This project delivers high-accuracy sentiment classification (**POSITIVE** / **NEGATIVE**) with confidence percentage scoring and class probability distributions. It features an interactive **Gradio** & **Streamlit** web interface deployed on cloud servers and integrated with **GitHub Actions** for automated CI/CD deployments.
+This project delivers high-accuracy sentiment classification (**POSITIVE** / **NEGATIVE**) with confidence percentage scoring, class probability distributions, **Explainable AI keyword highlighting**, and **Batch CSV dataset processing**. It features an interactive multi-tab **Gradio** web dashboard integrated with **GitHub Actions** for automated CI/CD deployments.
 
 ---
 
 ## ✨ Features
 
+- **💡 Explainable AI Keyword Highlighting:** Highlights positive terms in **green** (`+weight`) and negative terms in **red** (`-weight`) inside original text.
+- **📁 Batch CSV Dataset Processing:** Upload `.csv` or `.xlsx` files, process hundreds of reviews in parallel, and export annotated CSVs with sentiment labels and confidence scores.
 - **Advanced Text Preprocessing:** HTML unescaping, URL/mention cleaning, contraction expansion (`don't` -> `do not`), regex filtering, tokenization, stopword removal, and lemmatization.
 - **Negation-Aware Filtering:** Preserves critical negation words (`not`, `never`, `cannot`, `no`, `neither`) to maintain sentiment context.
 - **High-Dimensional TF-IDF:** Extracts 150,000 unigram and bigram features with logarithmic sublinear term frequency scaling.
 - **Machine Learning Classifier:** Optimized L2-regularized Logistic Regression classifier tuned with class balancing.
-- **Confidence Scoring:** Real-time probability outputs and confidence level calculation.
-- **Interactive Web Interface:** Modern UI with example input quick-buttons and clean NLP token inspection.
 - **Cloud Deployment:** Runs 24/7 online independently of local hardware.
 
 ---
@@ -86,7 +86,6 @@ The model is trained on a combined multi-domain dataset of over **88,000+ review
                            ↓
                ┌───────────────────────┐
                │   Trained ML Model    │
-               │                       │
                │  Logistic Regression  │
                └───────────┬───────────┘
                            ↓
@@ -96,11 +95,8 @@ The model is trained on a combined multi-domain dataset of over **88,000+ review
                └───────────┬───────────┘
                            ↓
                ┌───────────────────────┐
-               │ Confidence Score (%)  │
-               └───────────┬───────────┘
-                           ↓
-               ┌───────────────────────┐
-               │ Gradio / Streamlit UI │
+               │  Explainable AI &     │
+               │  Keyword Highlighting │
                └───────────────────────┘
 ```
 
@@ -127,7 +123,7 @@ Evaluated across 5-fold cross-validation and independent test splits:
 ```text
 Sentiment-Analysis/
 │
-├── app.py                      # Main Gradio application for Hugging Face Space & GitHub
+├── app.py                      # Multi-tab Gradio Web Application & Dashboard
 ├── requirements.txt            # Package dependencies
 ├── README.md                   # Portfolio documentation
 ├── .gitignore                  # Git ignore rules
@@ -140,7 +136,7 @@ Sentiment-Analysis/
 ├── src/                        # Modular Python source package
 │   ├── __init__.py
 │   ├── preprocessing.py        # Text preprocessing functions
-│   └── prediction.py           # Model loading & inference pipeline
+│   └── prediction.py           # Inference, Explainable AI, & Batch processing logic
 │
 ├── notebooks/                  # Project Jupyter Notebooks
 │   └── SentimentAnalysis.ipynb # Training notebook
@@ -173,20 +169,6 @@ Sentiment-Analysis/
    python app.py
    ```
    Open `http://127.0.0.1:7860` in your web browser.
-
----
-
-## 🌐 Deploying Hugging Face Space & Streamlit Cloud
-
-### 1. Create Hugging Face Space
-1. Go to **[huggingface.co/new-space](https://huggingface.co/new-space)**.
-2. Space Name: `sentiment-analysis-ai`
-3. SDK: **Gradio**
-4. Visibility: **Public**
-5. Click **Create Space**.
-
-### 2. Automated GitHub Sync
-Add your Hugging Face **Write Token** to GitHub Secrets (`Settings -> Secrets -> Actions -> New repository secret`) named **`HF_TOKEN`**. Every push to `main` will automatically update your live Space!
 
 ---
 

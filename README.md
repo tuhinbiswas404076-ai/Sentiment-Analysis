@@ -16,6 +16,7 @@ short_description: State-of-the-art Sentiment Analysis Model using TF-IDF and Lo
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-1.3%2B-orange.svg)](https://scikit-learn.org/)
 [![Gradio](https://img.shields.io/badge/Gradio-4.0%2B-ff5500.svg)](https://gradio.app/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.30%2B-red.svg)](https://streamlit.io/)
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-yellow.svg)](https://huggingface.co/spaces)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
@@ -23,16 +24,17 @@ An end-to-end, production-ready **AI Sentiment Analysis** machine learning solut
 
 ---
 
-## 🚀 Live Demos & Repository Links
+## 🚀 Live Demo Links
 
-- 🔗 **Hugging Face Live Demo:** [https://huggingface.co/spaces/tuhinbiswas404076-ai/sentiment-analysis-ai](https://huggingface.co/spaces/tuhinbiswas404076-ai/sentiment-analysis-ai)
-- 💻 **GitHub Source Code:** [https://github.com/tuhinbiswas404076-ai/Sentiment-Analysis](https://github.com/tuhinbiswas404076-ai/Sentiment-Analysis)
+- ⚡ **Active Live Demo Link:** [https://besides-directed-smaller-follows.trycloudflare.com](https://besides-directed-smaller-follows.trycloudflare.com)
+- 🌐 **Hugging Face Space Link:** [https://huggingface.co/spaces/tuhinbiswas404076-ai/sentiment-analysis-ai](https://huggingface.co/spaces/tuhinbiswas404076-ai/sentiment-analysis-ai)
+- 💻 **GitHub Repository:** [https://github.com/tuhinbiswas404076-ai/Sentiment-Analysis](https://github.com/tuhinbiswas404076-ai/Sentiment-Analysis)
 
 ---
 
 ## 📌 Project Overview
 
-This project delivers high-accuracy sentiment classification (**POSITIVE** / **NEGATIVE**) with confidence percentage scoring and class probability distributions. It features an interactive **Gradio** web interface deployed 24/7 on **Hugging Face Spaces** and is integrated with **GitHub Actions** for automated CI/CD deployments.
+This project delivers high-accuracy sentiment classification (**POSITIVE** / **NEGATIVE**) with confidence percentage scoring and class probability distributions. It features an interactive **Gradio** & **Streamlit** web interface deployed on cloud servers and integrated with **GitHub Actions** for automated CI/CD deployments.
 
 ---
 
@@ -43,7 +45,7 @@ This project delivers high-accuracy sentiment classification (**POSITIVE** / **N
 - **High-Dimensional TF-IDF:** Extracts 150,000 unigram and bigram features with logarithmic sublinear term frequency scaling.
 - **Machine Learning Classifier:** Optimized L2-regularized Logistic Regression classifier tuned with class balancing.
 - **Confidence Scoring:** Real-time probability outputs and confidence level calculation.
-- **Interactive Web Interface:** Modern Gradio UI with example input quick-buttons and clean NLP token inspection.
+- **Interactive Web Interface:** Modern UI with example input quick-buttons and clean NLP token inspection.
 - **Cloud Deployment:** Runs 24/7 online independently of local hardware.
 
 ---
@@ -95,6 +97,10 @@ The model is trained on a combined multi-domain dataset of over **88,000+ review
                            ↓
                ┌───────────────────────┐
                │ Confidence Score (%)  │
+               └───────────┬───────────┘
+                           ↓
+               ┌───────────────────────┐
+               │ Gradio / Streamlit UI │
                └───────────────────────┘
 ```
 
@@ -121,7 +127,7 @@ Evaluated across 5-fold cross-validation and independent test splits:
 ```text
 Sentiment-Analysis/
 │
-├── app.py                      # Main Gradio application for Hugging Face Space
+├── app.py                      # Main Gradio application for Hugging Face Space & GitHub
 ├── requirements.txt            # Package dependencies
 ├── README.md                   # Portfolio documentation
 ├── .gitignore                  # Git ignore rules
@@ -170,14 +176,17 @@ Sentiment-Analysis/
 
 ---
 
-## 🔄 GitHub to Hugging Face Automated Synchronization
+## 🌐 Deploying Hugging Face Space & Streamlit Cloud
 
-This repository uses a **GitHub Actions Workflow** ([`.github/workflows/sync-to-huggingface.yml`](.github/workflows/sync-to-huggingface.yml)) to automatically push updates to Hugging Face Spaces whenever changes are pushed to `main`.
+### 1. Create Hugging Face Space
+1. Go to **[huggingface.co/new-space](https://huggingface.co/new-space)**.
+2. Space Name: `sentiment-analysis-ai`
+3. SDK: **Gradio**
+4. Visibility: **Public**
+5. Click **Create Space**.
 
-To configure sync:
-1. Obtain a **Write Token** from [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens).
-2. Add it to your GitHub Repository: `Settings -> Secrets and variables -> Actions -> New repository secret`.
-3. Name the secret **`HF_TOKEN`**.
+### 2. Automated GitHub Sync
+Add your Hugging Face **Write Token** to GitHub Secrets (`Settings -> Secrets -> Actions -> New repository secret`) named **`HF_TOKEN`**. Every push to `main` will automatically update your live Space!
 
 ---
 
@@ -187,4 +196,4 @@ To configure sync:
 - **Data Manipulation:** Pandas, NumPy
 - **Machine Learning & NLP:** Scikit-Learn, NLTK, Contractions, Joblib
 - **Web Framework:** Gradio, Streamlit
-- **Deployment & CI/CD:** Hugging Face Spaces, GitHub Actions, Git
+- **Deployment & CI/CD:** Hugging Face Spaces, Streamlit Cloud, GitHub Actions, Git
